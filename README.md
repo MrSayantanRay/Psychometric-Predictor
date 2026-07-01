@@ -17,7 +17,7 @@ The notebook builds supervised classifiers to predict ordinal mental-health seve
 
 | Property | Detail |
 |---|---|
-| **Source** | Google Drive CSV (`file_id: 1pO9NRnBFrjFvI8FuBV3nHAS1brQJNlL3`), downloaded via `gdown` |
+| **Source** | [Mendeley Research Data](https://data.mendeley.com/) |
 | **Size** | 978 respondents × 93 columns (87 after dropping sensitive/unused fields) |
 | **Context** | Indian metro respondents (e.g. Kolkata, Mumbai, Delhi); COVID lockdown-era survey with **T1** and **T2** timepoints |
 | **DASS-21 items (21 features)** | Ordinal Likert responses (4 levels: *Did not apply* → *Applied very much or most of the time*) for items such as `felt_downhearted_and_blue`, `dry_mouth`, `finding_hard_to_wind_down`, etc. |
