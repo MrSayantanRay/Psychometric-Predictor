@@ -11,7 +11,7 @@ The notebook builds supervised classifiers to predict ordinal mental-health seve
 - Uses permutation importance to check whether predictive signal aligns with the DASS-21 subscale structure (7 depression, 7 anxiety, 7 stress items).
 - Visualizes decision boundaries and confusion patterns between adjacent severity classes.
 
-This is an exploratory psychometric / ML study, not a clinical diagnostic tool.
+⚠️ This is an exploratory psychometric / ML study, not a **clinical diagnostic tool.**
 
 ## Dataset
 
