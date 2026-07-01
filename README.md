@@ -75,9 +75,9 @@ Dropped columns for privacy / redundancy: `name`, `religion`, `caste`, `owned/re
 
 | Outcome | Test accuracy | Test weighted F1 | CV mean weighted F1 (± std) |
 |---|---:|---:|---|
-| **Depression** | 0.913 | 0.916 | 0.926 ± 0.031 |
-| **Anxiety** | 0.944 | 0.947 | 0.924 ± 0.050 |
-| **Stress** | 0.949 | 0.952 | 0.930 ± 0.045 |
+| **Depression** | 0.908 | 0.911 | 0.910 ± 0.052 |
+| **Anxiety** | 0.89 | 0.901 | 0.906 ± 0.033 |
+| **Stress** | 0.916 | 0.940 | 0.920 ± 0.019 |
 
 ### Interpretation highlights
 
