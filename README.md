@@ -129,27 +129,6 @@ Downloads/
 
 There is no packaged Python module, CLI, or trained-model artifact checked into the repo.
 
-## What You May Have Overlooked
-
-Real gaps and limitations visible in the notebook itself:
-
-| Area | Gap |
-|---|---|
-| **Reproducibility** | No `requirements.txt` or pinned dependency versions; dataset lives on Google Drive rather than in-repo. |
-| **Validation leakage risk** | `StandardScaler` is fit on the full training split before cross-validation; CV runs on pre-scaled features instead of fitting the scaler inside each fold. |
-| **Feature selection vs. test set** | Multiple model variants and feature drops are compared using the same hold-out split; no nested CV or separate validation fold for selection. |
-| **Unused longitudinal data** | `mh_T2.csv` is created but never used for prediction, change-over-time analysis, or external validation. |
-| **Ordinal targets treated as nominal** | Severity levels have natural order, but the model uses standard multiclass logistic regression rather than ordinal/proportional-odds approaches. |
-| **Single model family** | Only logistic regression is tried; no baselines (majority class, linear SVM, tree ensembles) or hyperparameter search. |
-| **Inconsistent random seeds** | `random_state=42` for depression splits vs `random_state=420` for some anxiety/stress splits and CV configs. |
-| **Small, imbalanced sample** | n=978 with skewed class counts; rare classes (e.g. Mild depression) show lower precision/recall. |
-| **Limited EDA** | Little exploratory analysis (distributions, missingness audit, city/age breakdowns) before modeling. |
-| **Ethics & intended use** | Mental-health severity labels are sensitive; the notebook does not discuss consent, clinical validity, or prohibitions on deployment as a screening/diagnostic tool. PII columns are dropped, but the raw source once included names. |
-| **Deployment** | No saved model (`joblib`/`pickle`), API, or inference script; notebook-only workflow. |
-| **Tests & CI** | No automated tests for preprocessing encoders, metric calculations, or data schema. |
-| **Documentation drift** | `!pip install` inside a code cell and Colab-specific assumptions make local reproduction slightly manual. |
-| **Encoder edge cases** | Incremental demographic feature evaluation triggers `unknown categories` warnings from `OneHotEncoder` on some splits. |
-
 ---
 
 *Generated from `Psychometric_Predictor.ipynb`.*
